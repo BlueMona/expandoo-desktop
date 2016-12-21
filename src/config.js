@@ -7,7 +7,9 @@ cfg.updateUrl = 'https://leviosa.peerio.com/update';
 cfg.currentVersion = app.getVersion();
 cfg.socketServerUrl = 'wss://hocuspocus.peerio.com'; // todo: branding should replace default url
 
-cfg.stringReplacements = [];
+cfg.stringReplacements = [
+    { original: 'Peerio', replacement: 'Expandoo' }
+];
 
 if (isDevEnv) {
     try {
