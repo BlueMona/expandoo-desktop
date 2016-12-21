@@ -141,8 +141,8 @@
     }
   },
   "build": {
-    "appId": "com.peerio.desktop",
-    "productName": "Icebear",
+    "appId": "com.expandoo.desktop",
+    "productName": "Expandoo",
     "files": [
       "**",
       "!node_modules/material-design-icons${/*}",
@@ -165,7 +165,7 @@
       "target": [
         "squirrel"
       ],
-      "title": "Icebear",
+      "title": "Expandoo",
       "version": "1.0.0",
       "msi": true
     },
