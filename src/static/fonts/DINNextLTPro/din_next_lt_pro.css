@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: normal;
+  font-weight: 200; /* fallback */
+  src: url(DINNextLTPro-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: italic;
+  font-weight: 200; /* fallback */
+  src: url(DINNextLTPro-LightItalic.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url(DINNextLTPro-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: url(DINNextLTPro-LightItalic.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(DINNextLTPro-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url(DINNextLTPro-Italic.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: normal;
+  font-weight: 500; /* fallback */
+  src: url(DINNextLTPro-Heavy.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: italic;
+  font-weight: 500; /* fallback */
+  src: url(DINNextLTPro-HeavyItalic.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url(DINNextLTPro-Heavy.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: url(DINNextLTPro-HeavyItalic.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url(DINNextLTPro-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: url(DINNextLTPro-BoldItalic.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url(DINNextLTPro-Black.otf) format('opentype');
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  font-style: italic;
+  font-weight: 800;
+  src: url(DINNextLTPro-BlackItalic.otf) format('opentype');
+}
