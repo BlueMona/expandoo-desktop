@@ -6,7 +6,8 @@ cfg.appName = 'Expandoo';
 cfg.updateUrl = 'https://leviosa.peerio.com/update';
 cfg.currentVersion = app.getVersion();
 cfg.socketServerUrl = 'wss://hocuspocus.peerio.com';
-cfg.supportUrl = 'https://peerio.zendesk.com';
+cfg.supportUrl = 'https://expandoo.eu/support-doesnt-exist-yet';
+cfg.termsUrl = 'https://expandoo.eu/terms-dont-exist-yet';
 
 cfg.stringReplacements = [
     { original: 'Peerio', replacement: 'Expandoo' }
