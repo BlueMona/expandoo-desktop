@@ -1,19 +1,19 @@
 {
-  "name": "icebear-desktop",
-  "productName": "Icebear",
+  "name": "expandoo-desktop",
+  "productName": "Expandoo",
   "version": "1.2.0",
-  "description": "Peerio desktop client (codename Icebear)",
+  "description": "Expandoo desktop client",
   "main": "build/main.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PeerioTechnologies/peerio-desktop.git"
+    "url": "git+https://github.com/PeerioTechnologies/expandoo-desktop.git"
   },
   "author": "Technologies Peerio Inc. <support@peerio.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PeerioTechnologies/peerio-desktop/issues"
+    "url": "https://github.com/PeerioTechnologies/expandoo-desktop/issues"
   },
-  "homepage": "https://github.com/PeerioTechnologies/peerio-desktop#readme",
+  "homepage": "https://github.com/PeerioTechnologies/expandoo-desktop#readme",
   "dependencies": {
     "blake2s-js": "1.2.0",
     "bluebird": "3.4.6",
