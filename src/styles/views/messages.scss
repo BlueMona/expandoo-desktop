@@ -114,7 +114,7 @@
 
       p {
         line-height: 1.5;
-        margin: $margin-small 0 0 $margin-default;
+        margin: 0 0 0 $margin-default;
         white-space: pre-wrap;
       }
 
@@ -122,30 +122,13 @@
         margin-top: $margin-small;
       }
 
-      .interweave__emoji {
-        display: inline-block;
-        margin: 0 2px;
-        vertical-align: middle;
-
-        img {
-          width: 1.5em;
-        }
+      b,
+      strong {
+        font-weight: 600;
       }
 
-      .interweave__emoji {
-        &.interweave__emoji--large {
-          img {
-            width: 2.4em;
-          }
-        }
-      }
-
-      .interweave__link {
+      a {
         color: $color-brand;
-
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
   }
@@ -162,14 +145,6 @@
     padding: 0 $padding-small;
     position: relative;
 
-    .rt-input-input,
-    .DraftEditor-root {
-      overflow-x: hidden;
-      overflow-y: auto;
-      padding: $padding-small 0;
-      width: 100%;
-    }
-
     .color-brand > .material-icons {
       color: $color-brand;
     }
@@ -178,23 +153,34 @@
       color: $color-affirmative;
     }
 
-    textarea,
-    .DraftEditor-root,
-    .DraftEditor-editorContainer {
+    .ql-container {
+      font-family: inherit;
+      font-size: inherit;
+      padding: $padding-small 0;
+      width: 100%;
+    }
+
+    .ql-editor {
       line-height: 1.45;
       max-height: 96px;
-      resize: none;
+      padding: 0;
+
+      img {
+        vertical-align: middle;
+        width: 1.5em;
+      }
     }
-    //.emoji-dialog {
-    //  bottom: 75px;
-    //  height: 375px;
-    //  position: absolute;
-    //  right: 60px;
-    //  width: 340px;
-    //  .emojione {
-    //    zoom: .38;
-    //  }
-    //}
+  }
+  // both for text input and chat content
+  img.emojione {
+    display: inline-block;
+    height: 3ex;
+    margin: -.2ex .15em .2ex;
+    min-height: 20px;
+    min-width: 20px;
+    -webkit-user-select: initial;
+    vertical-align: middle;
+    width: auto;
   }
 }
 

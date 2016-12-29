@@ -1,6 +1,7 @@
 const cfg = require('./icebear').config; //eslint-disable-line
 const app = require('electron').app || require('electron').remote.app;
 const isDevEnv = require('./helpers/is-dev-env');
+const { sanitizeChatMessage } = require('./helpers/sanitizer');
 
 cfg.appName = 'Expandoo';
 cfg.updateUrl = 'https://leviosa.peerio.com/update';

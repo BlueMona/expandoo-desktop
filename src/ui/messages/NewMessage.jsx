@@ -1,7 +1,7 @@
 const React = require('react');
 const { observable, computed, when } = require('mobx');
 const { observer } = require('mobx-react');
-const { Button, Chip, IconButton, Input, List, ListItem, ListSubHeader, ProgressBar } = require('react-toolbox');
+const { Button, Chip, FontIcon, IconButton, Input, List, ListItem, ListSubHeader, ProgressBar } = require('react-toolbox');
 const { t } = require('peerio-translator');
 const { contactStore, chatStore } = require('../../icebear'); //eslint-disable-line
 const css = require('classnames');
@@ -21,12 +21,13 @@ class NewMessage extends React.Component {
     }
 
     handleTextChange = newVal => {
-        if (newVal.length > 1 && ', '.includes(newVal[newVal.length - 1])) {
-            this.query = newVal.substr(0, newVal.length - 1).trim();
+        const newValLower = newVal.toLowerCase();
+        if (newValLower.length > 1 && ', '.includes(newValLower[newValLower.length - 1])) {
+            this.query = newValLower.substr(0, newValLower.length - 1).trim();
             this.tryAcceptUsername();
             return;
         }
-        this.query = newVal.trim();
+        this.query = newValLower.trim();
     };
 
     // Don't use onKeyPress it won't catch backspace
@@ -77,6 +78,7 @@ class NewMessage extends React.Component {
                         <IconButton icon="close" onClick={this.handleClose} />
                     </div>
                     <div className="new-message-search">
+                        <FontIcon value="search" />
                         <div className="chip-wrapper">
                             {this.selected.map(c =>
                                 <Chip key={c.username} className={css('username', { 'not-found': c.notFound })}

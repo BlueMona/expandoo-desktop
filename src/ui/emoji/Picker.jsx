@@ -54,7 +54,7 @@ class Picker extends React.Component {
         this.dontHide = false;
         setTimeout(() => {
             if (!this.dontHide)store.hovered = null;
-        }, 1000);
+        }, 2000);
     };
 
     handleScroll = _.throttle(() => {
@@ -122,8 +122,9 @@ class InfoPane extends React.Component {
             <div className="info-pane">
                 <span className={`emojione emojione-${item.unicode}`} />
                 <div>
-                    {item.name}<br />
-                    {item.shortname} {item.aliases}<br />{item.aliases_ascii}
+                    <span className="bold">{item.name}</span><br />
+                    {item.shortname} {item.aliases}<br />
+                    <span className="monospace">{item.aliases_ascii}</span>
                 </div>
             </div>
         );

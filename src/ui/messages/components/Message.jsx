@@ -2,18 +2,38 @@ const React = require('react');
 const Avatar = require('../../shared-components/Avatar');
 const { observer } = require('mobx-react');
 const { time } = require('../../../helpers/formatter');
-const Interweave = require('peerio-interweave/lib').default;
-const EmojiMatcher = require('peerio-interweave/lib/matchers/Emoji').default;
-const UrlMatcher = require('peerio-interweave/lib/matchers/Url').default;
-const EmailMatcher = require('peerio-interweave/lib/matchers/Email').default;
+const { sanitizeChatMessage } = require('../../../helpers/sanitizer');
+const emojione = require('emojione');
+const Autolinker = require('autolinker');
 
-const matchers = [
-    new EmojiMatcher('emoji', { convertShortName: true, convertUnicode: true, enlargeUpTo: 10 }),
-    new UrlMatcher('url'),
-    new EmailMatcher('email')
-];
+const autolinker = new Autolinker({
+    urls: {
+        schemeMatches: true,
+        wwwMatches: true,
+        tldMatches: true
+    },
+    email: true,
+    phone: true,
+    mention: false,
+    hashtag: false,
+    stripPrefix: false,
+    newWindow: false,
+    truncate: 0,
+    className: '',
+    stripTrailingSlash: false
+});
 
-const emojiPath = './static/emoji/png/{{hexcode}}.png';
+function processMessage(msg) {
+    if (msg.processedText != null) return msg.processedText;
+    // removes all html except whitelisted
+    // closes unclosed tags
+    let str = sanitizeChatMessage(msg.text);
+    str = emojione.unicodeToImage(str);
+    str = autolinker.link(str);
+    str = { __html: str };
+    msg.processedText = str;
+    return str;
+}
 
 @observer
 class Message extends React.Component {
@@ -26,8 +46,7 @@ class Message extends React.Component {
                         <div className="user">{this.props.message.sender.username}</div>
                         <div className="timestamp">{time.format(this.props.message.timestamp)}</div>
                     </div>
-                    <Interweave tagName="p" content={this.props.message.text} noHtml
-                                matchers={matchers} emojiPath={emojiPath} />
+                    <p dangerouslySetInnerHTML={processMessage(this.props.message)} />
                 </div>
                 {this.props.message.sending ? <div className="sending-overlay" /> : null}
             </div>

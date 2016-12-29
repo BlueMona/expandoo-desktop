@@ -1,6 +1,6 @@
 const React = require('react');
 const { Component } = require('react');
-const { observable, computed } = require('mobx');
+const { observable, computed, reaction } = require('mobx');
 const { observer } = require('mobx-react');
 const { config, socket, validation } = require('../../icebear'); // eslint-disable-line
 const { t } = require('peerio-translator');
@@ -12,6 +12,7 @@ const OrderedFormStore = require('../../stores/ordered-form-store');
 const { validators } = validation; // use common validation from core
 
 class PasscodeStore extends OrderedFormStore {
+    @observable fieldsExpected = 2;
     @observable passcode;
     @observable passcodeRepeat;
 
@@ -28,6 +29,15 @@ class PasscodeStore extends OrderedFormStore {
             this.props.profileStore.lastName,
             'peerio'
         ];
+    }
+
+    componentDidMount() {
+        // force passcodeRepeat to validate on subsequent passcode changes
+        reaction(() => this.props.store.passcode, () => {
+            if (this.props.store.passcodeRepeat) {
+                this.props.store.validatePasscodeRepeat();
+            }
+        });
     }
 
     handleKeyPress = (e) => {
