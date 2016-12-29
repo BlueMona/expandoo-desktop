@@ -1,7 +1,7 @@
 {
   "name": "expandoo-desktop",
   "productName": "Expandoo",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Expandoo desktop client",
   "main": "build/main.js",
   "repository": {
@@ -22,6 +22,7 @@
     "classnames": "2.2.5",
     "dompurify": "^0.8.4",
     "electron-squirrel-startup": "1.0.0",
+    "emojione": "2.2.7",
     "eventemitter3": "^2.0.2",
     "lodash": "4.17.2",
     "material-design-icons": "3.0.1",
