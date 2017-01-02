@@ -5,7 +5,7 @@ const css = require('classnames');
 const FileActions = require('./FileActions');
 const FileLoading = require('./FileLoading');
 const { Checkbox, ProgressBar } = require('react-toolbox');
-const { fileStore } = require('../../../icebear');
+const { fileStore } = require('~/icebear');
 const electron = require('electron').remote;
 
 @observer
@@ -67,7 +67,10 @@ class FileLine extends React.Component {
                 <td className="hide-text uppercase">{this.props.file.ext}</td>
                 {
                     this.showActions
-                    ? <FileActions downloadDisabled={(this.props.file.downloading || this.props.file.uploading)}
+                    ? <FileActions downloadDisabled={
+                        (!this.props.file.readyForDownload
+                            || this.props.file.downloading
+                            || this.props.file.uploading)}
                              shareDisabled newFolderDisabled deleteDisabled={false}
                                 onDelete={this.deleteFile} onDownload={this.download} />
                     : null

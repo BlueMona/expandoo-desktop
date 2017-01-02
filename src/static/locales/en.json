@@ -534,8 +534,10 @@
   "file_nukeButton": "Unshare & remove from all clouds",
   "file_locationLocal": "On this device (decrypted) and in the cloud (encrypted)",
   "file_locationCloud": "In the cloud (encrypted)",
-  "file_uploadComplete": "Upload complete.",
+  "file_uploadsComplete": "All file uploads have finished.",
+  "file_uploadCompleteNamed": "{fileName} finished uploading.",
   "file_uploadFailed": "Upload failed.",
+  "file_uploadFailedNamed": "{fileName} failed to upload.",
   "file_uploadStorageExceeded": "Storage quota exceeded.",
   "file_namePrompt": "Enter filename:",
   "fileSelect_title": "Select your files",
@@ -717,5 +719,7 @@
   "directMessages": "Direct message",
   "userSearch": "Enter username",
   "messageSearch": "Search conversations",
-  "wait": "Working..."
+  "wait": "Working...",
+  "confirm_deleteFile": "Are you sure you want to delete this file?",
+  "confirm_deleteFiles": "Are you sure you want to delete {count} files?"
 }
