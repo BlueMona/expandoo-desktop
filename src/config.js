@@ -6,7 +6,7 @@ const { sanitizeChatMessage } = require('./helpers/sanitizer');
 cfg.appName = 'Expandoo';
 cfg.updateUrl = 'https://expandoo-update.peerio.com/update';
 cfg.currentVersion = app.getVersion();
-cfg.socketServerUrl = 'wss://expandoo-ws.peerio.com';
+cfg.socketServerUrl = 'wss://hocuspocus.peerio.com';
 cfg.supportUrl = 'https://expandoo.eu/support-doesnt-exist-yet';
 cfg.termsUrl = 'https://expandoo.eu/terms-dont-exist-yet';
 
