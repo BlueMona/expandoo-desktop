@@ -1,7 +1,7 @@
 {
   "name": "expandoo-desktop",
   "description": "Expandoo icebear desktop",
-  "version": "1.4.3",
+  "version": "1.5.1",
   "scripts": {
     "pull": "./scripts/pull_latest_peerio.js",
     "customize:files": "rsync -r overrides/ ../.expandoo-desktop-build",
