@@ -6,7 +6,7 @@ For most releases, you will want to run `npm run release` to bump the version, t
 
 Please note that changes made to the files inlcuded in `overrides/` will not automatically propagate from peerio-desktop in any way. So, for example, if you made a change to `src/config.js` in peerio-desktop, and this change needs to be made in `expandoo-desktop`, the latter will need to be changed manually. 
 
-## One (ok, 2) stop shop: `npm run release`
+## One (ok, 2) stop shop: `npm run release` or `npm run prerelease`
 
 Pulls peerio-destkop, makes necessary modifications from local overrides, bumps version number.
 
@@ -14,7 +14,7 @@ Follow this by `npm run publish` if you're sure everything is right.
 
 ## Smaller steps
 
-### `npm run bump`
+### `npm run bump` or `npm run bump:prerelease`
 
 Sets the top-level version number to `max($PEERIO_DESKTOP_VESION, $EXPANDOO_DESKTOP_VERSION + 1 patch)`
 

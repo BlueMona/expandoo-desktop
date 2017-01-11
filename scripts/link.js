@@ -4,7 +4,7 @@ const fs = require('fs');
 const execp = require('./lib/execp');
 const path = require('path');
 
-const distDir = '../.expandoo-desktop-build';
+const distDir = require('./lib/config').buildDir;
 
 Promise.resolve()
     .then(() => {

@@ -4,13 +4,20 @@ const fs = require('fs');
 const _ = require('lodash');
 const semver = require('semver');
 const execp = require('./lib/execp');
+var argv = require('yargs').argv;
 
-const distDir = '../.expandoo-desktop-build';
+const distDir = require('./lib/config').buildDir;
 const fsOpts = { encoding: 'utf8' };
 const pkgFile = './package.json';
 const pkgObj = JSON.parse(fs.readFileSync(pkgFile, fsOpts));
 const expandooVersion = pkgObj.version;
 const peerioVersion = JSON.parse(fs.readFileSync(`${distDir}/package.json`, fsOpts)).version;
+
+let releaseType = 'patch';
+
+if (argv.prerelease) {
+    releaseType = 'prerelease';
+}
 
 // calculate version number
 if (semver.gt(peerioVersion, expandooVersion)) {
@@ -18,7 +25,7 @@ if (semver.gt(peerioVersion, expandooVersion)) {
     console.log(`\x1b[35m ... using peerio-desktop version ${pkgObj.version} ...`);
 
 } else {
-    pkgObj.version = semver.inc(expandooVersion, 'patch');
+    pkgObj.version = semver.inc(expandooVersion, releaseType, 'rc');
     console.log(`\x1b[35m ... bumping expandoo-desktop version to ${pkgObj.version} ...`);
 }
 

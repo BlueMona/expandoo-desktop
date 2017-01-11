@@ -14,7 +14,10 @@
     "postmerge": "npm update",
     "commitmsg": "validate-commit-msg",
     "bump": "./scripts/bump.js",
-    "release": "npm -run-all -l -n pull bump dist"
+    "bump:prerelease": "./scripts/bump.js --prerelease",
+    "release": "npm-run-all -l -n pull bump dist",
+    "prerelease": "npm-run-all -l -n pull bump:prerelease dist",
+    "publish": "git push --follow-tags origin master"
   },
   "repository": {
     "type": "git",
@@ -33,7 +36,8 @@
     "cz-conventional-changelog": "1.2.0",
     "validate-commit-msg": "2.8.2",
     "lodash": "4.17.2",
-    "semver": "^5.1.0"
+    "semver": "^5.1.0",
+    "yargs": "^6.6.0"
   },
   "config": {
     "commitizen": {

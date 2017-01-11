@@ -2,14 +2,16 @@
 'use strict';
 const fs = require('fs');
 const _ = require('lodash');
+const path = require('path');
 
+const distDir = require('./lib/config').buildDir;
 const fsOpts = { encoding: 'utf8' };
 const destinationJSONFiles = [
-    '../.expandoo-desktop-build/package.json',
-    '../.expandoo-desktop-build/app/package.json'
+    path.join(distDir, 'package.json'),
+    path.join(distDir, 'app/package.json')
 ];
 const regexFiles = [
-    '../.expandoo-desktop-build/src/index.html'
+    path.join(distDir, 'src/index.html')
 ];
 const sourceFile = JSON.parse(fs.readFileSync('./package.json', fsOpts));
 

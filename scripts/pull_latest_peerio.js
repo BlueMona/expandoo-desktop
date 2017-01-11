@@ -4,7 +4,7 @@
 const fs = require('fs');
 const execp = require('./lib/execp');
 
-const distDir = '../.expandoo-desktop-build';
+const distDir = require('./lib/config').buildDir;
 const repo = 'git@github.com:peeriotechnologies/peerio-desktop.git';
 const semverRegEx = /(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\+[0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*)?/;
 
