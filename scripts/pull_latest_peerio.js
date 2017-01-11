@@ -28,6 +28,10 @@ Promise.resolve()
         return Promise.resolve();
     })
     .then(() => {
+        return execp(`git fetch --all --tags --prune`);
+        //return execp(`cd ${distDir} && git clean -d -x -f`)
+    })
+    .then(() => {
         return execp(`git ls-remote --tags ${repo}`);
     })
     .then(tagList => {
@@ -38,9 +42,6 @@ Promise.resolve()
         console.log('\x1b[35m ... resetting working dir changes ...');
         return execp(`cd ${distDir} && git reset --hard`)
     })
-    //.then(() => {
-    //    return execp(`cd ${distDir} && git clean -d -x -f`)
-    //})
     .then(output => {
         console.log(output)
         console.log(`\x1b[35m ... checking out v${tag} ...`);
@@ -49,5 +50,9 @@ Promise.resolve()
     .then(() => {
         console.log('\x1b[35m ... installing dependencies ...');
         return execp(`cd ${distDir} && npm install`)
-    });
+    })
+    .catch(err => {
+        console.error('pull_latest_peerio ERROR: ', err);
+        process.exit(1)
+    })
 

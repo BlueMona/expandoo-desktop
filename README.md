@@ -6,7 +6,7 @@ For most releases, you will want to run `npm run release` to bump the version, t
 
 Please note that changes made to the files inlcuded in `overrides/` will not automatically propagate from peerio-desktop in any way. So, for example, if you made a change to `src/config.js` in peerio-desktop, and this change needs to be made in `expandoo-desktop`, the latter will need to be changed manually. 
 
-## One (ok, 2) stop shop: `npm run release` or `npm run prerelease`
+## One (ok, 2) stop shop: `npm run release` or `npm run pre-release`
 
 Pulls peerio-destkop, makes necessary modifications from local overrides, bumps version number.
 
@@ -18,13 +18,13 @@ Follow this by `npm run publish` if you're sure everything is right.
 
 Pulls the latest tag of `peerio-desktop` and installs its dependencies.
 
-### `npm run bump` or `npm run bump:prerelease`
+### `npm run bump` or `npm run bump:pre-release`
 
 Sets the top-level version number to `max($PEERIO_DESKTOP_VESION, $EXPANDOO_DESKTOP_VERSION + 1 patch)`
 
 So, if peerio-desktop's latest release is 1.3.4, and peerio-expandoo's latest release is also 1.3.4, the resulting bump will be to 1.3.5. This allows for expandoo-specific changes to bump the version by a patch number.
 
-`bumo:prerelease` would instead create a version & tag `1.3.5-rc0`.
+`bump:pre-release` would instead create a version & tag `1.3.5-rc0`.
 
 Note that the top-level release number set here will propagate down to the final Expandoo build. (See below)
 

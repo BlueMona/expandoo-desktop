@@ -15,16 +15,19 @@ const peerioVersion = JSON.parse(fs.readFileSync(`${distDir}/package.json`, fsOp
 
 let releaseType = 'patch';
 
-if (argv.prerelease) {
-    console.log('prerelease!')
-    releaseType = 'prerelease';
-}
+console.log(`\x1b[35m ... expandoo is at ${expandooVersion}, peerio is at ${peerioVersion} ...`);
+
 
 // calculate version number
+if (argv.prerelease) {
+    console.log(`\x1b[35m ... creating a prerelease ...`);
+    releaseType = 'prerelease';
+} else {
+    console.log(`\x1b[35m ... bumping patch version ...`);
+}
 if (semver.gt(peerioVersion, expandooVersion)) {
     pkgObj.version = peerioVersion;
     console.log(`\x1b[35m ... using peerio-desktop version ${pkgObj.version} ...`);
-
 } else {
     pkgObj.version = semver.inc(expandooVersion, releaseType, 'rc');
     console.log(`\x1b[35m ... bumping expandoo-desktop version to ${pkgObj.version} ...`);
