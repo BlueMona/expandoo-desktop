@@ -8,6 +8,7 @@
     "customize:strings": "./scripts/customize_strings.js",
     "app:dist": "cd ../.expandoo-desktop-build && npm run dist",
     "app:start": "cd ../.expandoo-desktop-build && npm start",
+    "app:clean": "rm -rf ../.expandoo-desktop-build",
     "shortcut": "./scripts/link.js",
     "start": "npm-run-all -l -n customize:files customize:strings app:start",
     "dist": "npm-run-all -l -n customize:files customize:strings app:dist shortcut",
