@@ -8,12 +8,13 @@ const distDir = require('./lib/config').buildDir;
 
 Promise.resolve()
     .then(() => {
+        console.log()
         const dest = path.join(__dirname, '..', 'build');
-        return execp(`rm ${dest} && ln -s ${path.join(__dirname, '..', distDir)} ${dest}`)
+        return execp(`rm ${dest} && ln -s ${distDir} ${dest}`)
     })
     .then(() => {
         const dest = path.join(__dirname, '..', 'dist');
-        return execp(`rm ${dest} && ln -s ${path.join(__dirname, '..', distDir, 'dist')} ${dest}`)
+        return execp(`rm ${dest} && ln -s ${path.join(distDir, 'dist')} ${dest}`)
     })
     .then(() => {
         console.log('\x1b[35m ... symlinked for easy access ...');

@@ -16,7 +16,7 @@
     "bump": "./scripts/bump.js",
     "bump:prerelease": "./scripts/bump.js --prerelease",
     "release": "npm-run-all -l -n pull bump dist",
-    "prerelease": "npm-run-all -l -n bump:prerelease",
+    "prerelease": "npm-run-all -l -n pull bump:prerelease dist",
     "publish": "git push --follow-tags origin master"
   },
   "repository": {

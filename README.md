@@ -14,17 +14,19 @@ Follow this by `npm run publish` if you're sure everything is right.
 
 ## Smaller steps
 
+### `npm run pull`
+
+Pulls the latest tag of `peerio-desktop` and installs its dependencies.
+
 ### `npm run bump` or `npm run bump:prerelease`
 
 Sets the top-level version number to `max($PEERIO_DESKTOP_VESION, $EXPANDOO_DESKTOP_VERSION + 1 patch)`
 
 So, if peerio-desktop's latest release is 1.3.4, and peerio-expandoo's latest release is also 1.3.4, the resulting bump will be to 1.3.5. This allows for expandoo-specific changes to bump the version by a patch number.
 
+`bumo:prerelease` would instead create a version & tag `1.3.5-rc0`.
+
 Note that the top-level release number set here will propagate down to the final Expandoo build. (See below)
-
-### `npm run pull`
-
-Pulls the latest tag of `peerio-desktop` and installs its dependencies.
 
 ### `npm run dist`
 

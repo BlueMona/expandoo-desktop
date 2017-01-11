@@ -16,6 +16,7 @@ const peerioVersion = JSON.parse(fs.readFileSync(`${distDir}/package.json`, fsOp
 let releaseType = 'patch';
 
 if (argv.prerelease) {
+    console.log('prerelease!')
     releaseType = 'prerelease';
 }
 
@@ -28,6 +29,9 @@ if (semver.gt(peerioVersion, expandooVersion)) {
     pkgObj.version = semver.inc(expandooVersion, releaseType, 'rc');
     console.log(`\x1b[35m ... bumping expandoo-desktop version to ${pkgObj.version} ...`);
 }
+
+// set windows build version
+pkgObj.build.win.version = pkgObj.version;
 
 // update version in top package.json
 fs.writeFileSync(pkgFile, JSON.stringify(pkgObj, null, 2), fsOpts);
