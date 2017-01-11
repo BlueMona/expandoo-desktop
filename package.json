@@ -1,7 +1,7 @@
 {
   "name": "expandoo-desktop",
   "description": "Expandoo icebear desktop",
-  "version": "1.5.2",
+  "version": "1.5.3-rc.0",
   "scripts": {
     "pull": "./scripts/pull_latest_peerio.js",
     "customize:files": "rsync -r overrides/ ../.expandoo-desktop-build",
@@ -88,7 +88,7 @@
         "squirrel"
       ],
       "title": "Expandoo",
-      "version": "1.5.2",
+      "version": "1.5.3-rc.0",
       "msi": true
     },
     "mac": {
