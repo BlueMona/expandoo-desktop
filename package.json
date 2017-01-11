@@ -1,7 +1,7 @@
 {
   "name": "expandoo-desktop",
   "description": "Expandoo icebear desktop",
-  "version": "1.5.1",
+  "version": "1.5.2-rc.0",
   "scripts": {
     "pull": "./scripts/pull_latest_peerio.js",
     "customize:files": "rsync -r overrides/ ../.expandoo-desktop-build",
@@ -16,7 +16,7 @@
     "bump": "./scripts/bump.js",
     "bump:prerelease": "./scripts/bump.js --prerelease",
     "release": "npm-run-all -l -n pull bump dist",
-    "prerelease": "npm-run-all -l -n pull bump:prerelease dist",
+    "prerelease": "npm-run-all -l -n bump:prerelease",
     "publish": "git push --follow-tags origin master"
   },
   "repository": {
