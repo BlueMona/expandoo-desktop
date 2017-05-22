@@ -25,7 +25,7 @@ peerio-desktop-release --nosign \
                        --destination ~/expandoo-test
 ```
 
-### Building a publishing a release
+### Building and publishing a release
 
 
 See [release instruction](https://github.com/PeerioTechnologies/desktop-release-builder) for setup details.
