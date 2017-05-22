@@ -10,3 +10,31 @@ equivalent files in the peerio-destkop project.
 [ ] Publisher name (json-overrides.json)
 [ ] All icons must be valid (examples: https://github.com/PeerioTechnologies/peerio-desktop/tree/master/icons)
 [ ] Adjust src/styles/vars/_colors.scss for Expandoo color theme
+
+
+## Releasing
+
+### Building a test release without publishing
+
+(Requires [desktop-release-builder](https://github.com/PeerioTechnologies/desktop-release-builder) installed)
+
+```
+peerio-desktop-release --nosign \
+                       --repository PeerioTechnologies/peerio-desktop \
+                       --overrides PeerioTechnologies/expandoo-desktop \
+                       --destination ~/expandoo-test
+```
+
+### Building a publishing a release
+
+
+See [release instruction](https://github.com/PeerioTechnologies/desktop-release-builder) for setup details.
+
+Example command:
+
+```
+peerio-desktop-release --shared ~/Shared \
+                       --repository PeerioTechnologies/peerio-desktop \
+                       --overrides PeerioTechnologies/expandoo-desktop \
+                       --publish
+```
