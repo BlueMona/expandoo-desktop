@@ -1,0 +1,31 @@
+{
+
+    "package.json": {
+        "name": "expandoo-messenger",
+        "description": "Expandoo Messenger",
+        "repository": {
+            "type": "git",
+            "url": "git+https://github.com/PeerioTechnologies/expandoo-desktop.git"
+        },
+        "author": "Technologies Peerio Inc. <support@peerio.com>",
+        "build": {
+            "appId": "com.expandoo.messenger",
+            "productName": "Expandoo Messenger",
+            "win": {
+              "publisherName": "Peerio Technologies Inc."
+            }
+        }
+    },
+
+    "app/package.json": {
+        "name": "expandoo-messenger",
+        "productName": "Expandoo Messenger",
+        "description": "Expandoo Messenger",
+        "repository": {
+            "type": "git",
+            "url": "git+https://github.com/PeerioTechnologies/expandoo-desktop.git"
+        },
+        "author": "Technologies Peerio Inc. <support@peerio.com>"
+    }
+
+}
