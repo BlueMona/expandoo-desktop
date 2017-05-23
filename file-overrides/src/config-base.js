@@ -17,7 +17,8 @@ module.exports = {
 
     translator: {
         stringReplacements: [
-            { original: 'Peerio', replacement: 'Expandoo' }
+            { original: 'Peerio', replacement: 'Expandoo' },
+            { original: 'a Peerio', replacement: 'an Expandoo' }
         ],
         urlMap: {
             contactFingerprint: 'https://expandoo.eu/doesnt-exist-yet',
