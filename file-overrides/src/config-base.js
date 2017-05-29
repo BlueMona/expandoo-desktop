@@ -17,6 +17,7 @@ module.exports = {
 
     translator: {
         stringReplacements: [
+            { original: 'a <b>Peerio', replacement: 'an <b>Expandoo' },
             { original: 'a Peerio', replacement: 'an Expandoo' },
             { original: 'Peerio', replacement: 'Expandoo' }
         ],
