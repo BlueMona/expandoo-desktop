@@ -5,8 +5,8 @@ $color-brand-secondary: $color-brand-primary;
 
 // Background gradients are used throughout Peerio Messenger.
 // If you don't wish do use gradients then leave $color-brand-primary as the value for $color-brand-secondary.
-// $color-brand-gradient: linear-gradient(to right, $color-brand-primary, $color-brand-secondary);
-// $color-brand-gradient-bottom: $color-brand-gradient;
+$color-brand-gradient: linear-gradient(to right, $color-brand-primary, $color-brand-secondary);
+$color-brand-gradient-bottom: $color-brand-gradient;
 
 // Background patterns
 // $background-pattern: './static/img/bg-pattern.png';
