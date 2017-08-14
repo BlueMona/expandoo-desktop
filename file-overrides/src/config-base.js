@@ -12,9 +12,6 @@ module.exports = {
     socketServerUrl: 'wss://hocuspocus.peerio.com',
     ghostFrontendUrl: 'https://mail.peerio.com',
 
-    // TODO: is this needed?
-    updateUrl: 'https://expandoo-update.peerio.com/update',
-
     translator: {
         stringReplacements: [
             { original: 'a <b>Peerio', replacement: 'an <b>Expandoo' },
