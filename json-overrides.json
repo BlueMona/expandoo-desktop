@@ -25,7 +25,12 @@
             "type": "git",
             "url": "git+https://github.com/PeerioTechnologies/expandoo-desktop.git"
         },
-        "author": "Technologies Peerio Inc. <support@peerio.com>"
+        "author": "Technologies Peerio Inc. <support@peerio.com>",
+        "updater": {
+            "manifests": [
+                "github:PeerioTechnologies/expandoo-desktop"
+            ]
+        }
     }
 
 }
