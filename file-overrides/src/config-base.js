@@ -3,13 +3,13 @@
  * release channel/whitelabel.
  */
 module.exports = {
-    appId: 'com.expandoo.messenger', // must be the same as in package.json
+    appId: 'com.expandoo.desktop', // must be the same as in package.json
 
     // App-unique name of keychain service for storing Account Key.
     // IMPORTANT: Changing this for the same app will invalidate autologin for all users.
-    keychainService: 'ExpandooMessenger',
+    keychainService: 'Expandoo',
 
-    socketServerUrl: 'wss://hocuspocus.peerio.com',
+    socketServerUrl: 'wss://login.expandoo.eu',
     ghostFrontendUrl: 'https://mail.peerio.com',
 
     translator: {
