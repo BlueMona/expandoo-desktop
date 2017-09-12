@@ -16,7 +16,7 @@ equivalent files in the peerio-destkop project.
 
 ### Building a test release without publishing
 
-(Requires [desktop-release-builder](https://github.com/PeerioTechnologies/desktop-release-builder) installed)
+(Requires [desktop-release-builder](https://github.com/PeerioTechnologies/desktop-release-builder) installed and configured)
 
 ```
 peerio-desktop-release --nosign \

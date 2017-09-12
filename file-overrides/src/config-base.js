@@ -9,8 +9,9 @@ module.exports = {
     // IMPORTANT: Changing this for the same app will invalidate autologin for all users.
     keychainService: 'Expandoo',
 
-    socketServerUrl: 'wss://login.expandoo.eu',
-    ghostFrontendUrl: 'https://mail.peerio.com',
+    socketServerUrl: 'wss://expandoo-ws.peerio.com',
+    ghostFrontendUrl: 'https://public.expandoo.eu',
+
     // no payments
     disablePayments: true,
 
@@ -21,15 +22,23 @@ module.exports = {
             { original: 'Peerio', replacement: 'Expandoo' }
         ],
         urlMap: {
-            contactFingerprint: 'https://expandoo.eu/doesnt-exist-yet',
-            mpDetail: 'https://expandoo.eu/doesnt-exist-yet',
-            tfaDetail: 'https://expandoo.eu/doesnt-exist-yet',
-            msgSignature: 'https://expandoo.eu/doesnt-exist-yet',
-            upgrade: 'https://expandoo.eu/doesnt-exist-yet',
-            proWelcome: 'https://expandoo.eu/doesnt-exist-yet',
-            proAccount: 'https://expandoo.eu/doesnt-exist-yet',
-            helpCenter: 'https://expandoo.eu/doesnt-exist-yet',
-            contactSupport: 'https://expandoo.eu/doesnt-exist-yet'
+            contactFingerprint: 'mailto:support@expandoo.eu',
+            mpDetail: 'mailto:support@expandoo.eu',
+            tfaDetail: 'mailto:support@expandoo.eu',
+            msgSignature: 'mailto:support@expandoo.eu',
+            socialShareUrl: 'https://www.peerio.com/',
+            socialShareImage: '',
+            upgrade: 'https://expandoo.eu',
+            helpCenter: 'https://peerio.zendesk.com/',
+            contactSupport: 'mailto:support@expandoo.eu',
+            // errorServerUrl: 'https://errors.peerio.com',
+            // errorServerProjectKey: 'a356be460e68de68b1d336e3bb4c06ed',
+            mailSupport: 'mailto:support@expandoo.eu',
+            iosApp: '',
+            androidApp: '',
+            googleAuthA: 'https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en',
+            googleAuthI: 'https://itunes.apple.com/app/google-authenticator/id388497605',
+            authy: 'https://authy.com'
         }
     }
 };
