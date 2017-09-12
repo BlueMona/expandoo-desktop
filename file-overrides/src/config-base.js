@@ -11,6 +11,8 @@ module.exports = {
 
     socketServerUrl: 'wss://login.expandoo.eu',
     ghostFrontendUrl: 'https://mail.peerio.com',
+    // no payments
+    disablePayments: true,
 
     translator: {
         stringReplacements: [
