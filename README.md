@@ -16,15 +16,12 @@ equivalent files in the peerio-destkop project.
 
 ### Building a test release without publishing
 
-(Requires [desktop-release-builder](https://github.com/PeerioTechnologies/desktop-release-builder) installed and configured)
-
 ```
-peerio-desktop-release --nosign \
-                       --repository PeerioTechnologies/peerio-desktop \
-                       --overrides PeerioTechnologies/expandoo-desktop \
-                       --destination ~/expandoo-test
+npm install
+./scripts/test-build.sh
 ```
 
+Build results will be in `test-build` directory.
 ### Building and publishing a release
 
 
@@ -33,8 +30,5 @@ See [release instruction](https://github.com/PeerioTechnologies/desktop-release-
 Example command:
 
 ```
-peerio-desktop-release --shared ~/Shared \
-                       --repository PeerioTechnologies/peerio-desktop \
-                       --overrides PeerioTechnologies/expandoo-desktop \
-                       --publish
+./scripts/deploy.sh
 ```
