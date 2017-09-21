@@ -7,12 +7,12 @@
             "type": "git",
             "url": "git+https://github.com/PeerioTechnologies/expandoo-desktop.git"
         },
-        "author": "Technologies Peerio Inc. <support@peerio.com>",
+        "author": "",
         "build": {
             "appId": "com.expandoo.desktop",
             "productName": "Expandoo",
             "win": {
-              "publisherName": "Peerio Technologies Inc."
+              "publisherName": "CMD.solutions"
             }
         }
     },
@@ -25,7 +25,7 @@
             "type": "git",
             "url": "git+https://github.com/PeerioTechnologies/expandoo-desktop.git"
         },
-        "author": "Technologies Peerio Inc. <support@peerio.com>",
+        "author": "",
         "updater": {
             "manifests": [
                 "github:PeerioTechnologies/expandoo-desktop"
