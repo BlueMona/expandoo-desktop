@@ -10,7 +10,7 @@ module.exports = {
     // IMPORTANT: Changing this for the same app will invalidate autologin for all users.
     keychainService: 'Expandoo',
 
-    socketServerUrl: 'wss://expandoo-ws.peerio.com',
+    socketServerUrl: 'wss://login.expandoo.eu',
     ghostFrontendUrl: 'https://public.expandoo.eu',
 
     // no payments
