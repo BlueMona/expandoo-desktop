@@ -30,7 +30,47 @@
             "manifests": [
                 "github:PeerioTechnologies/expandoo-desktop"
             ]
+        },
+        "peerio": {
+            "appId": "com.expandoo.desktop",
+            "whiteLabelBuild": true,
+            "keychainService": "Expandoo",
+            "socketServerUrl": "wss://login.expandoo.eu",
+            "ghostFrontendUrl": "https://public.expandoo.eu",
+            "disablePayments": true,
+            "translator": {
+                "stringReplacements": [
+                    {
+                        "original": "a <b>Peerio",
+                        "replacement": "an <b>Expandoo"
+                    },
+                    {
+                        "original": "a Peerio",
+                        "replacement": "an Expandoo"
+                    },
+                    {
+                        "original": "Peerio",
+                        "replacement": "Expandoo"
+                    }
+                ],
+                "urlMap": {
+                    "contactFingerprint": "mailto:support@expandoo.eu",
+                    "mpDetail": "mailto:support@expandoo.eu",
+                    "tfaDetail": "mailto:support@expandoo.eu",
+                    "msgSignature": "mailto:support@expandoo.eu",
+                    "socialShareUrl": "https://www.expandoo.eu/",
+                    "socialShareImage": "",
+                    "upgrade": "https://expandoo.eu",
+                    "helpCenter": "mailto:support@expandoo.eu",
+                    "contactSupport": "mailto:support@expandoo.eu",
+                    "mailSupport": "mailto:support@expandoo.eu",
+                    "iosApp": "",
+                    "androidApp": "",
+                    "googleAuthA": "https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en",
+                    "googleAuthI": "https://itunes.apple.com/app/google-authenticator/id388497605",
+                    "authy": "https://authy.com"
+                }
+            }
         }
     }
-
 }
